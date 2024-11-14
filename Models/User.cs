@@ -39,10 +39,12 @@ namespace Conecta.Models
         public DateTime? UpdateDate { get; set; }
 
 
-        // Connection with Roles table ---------------------------
+        // Connection with another tables ---------------------------
 
         [ForeignKey(nameof(RoleId))]
         public Role? Role { get; set; }
+
+        public Profile? Profile { get; set; }
 
 
 

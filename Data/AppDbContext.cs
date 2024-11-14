@@ -12,6 +12,9 @@ namespace Conecta.Data
     {
         public required DbSet<Role> Roles { get; set; }
         public required DbSet<User> Users { get; set; }
+        public required DbSet<Profile> Profiles { get; set; }
+
+
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
@@ -20,6 +23,7 @@ namespace Conecta.Data
             // base.OnModelCreating(modelBuilder);
             RoleSeeder.Seed(modelBuilder);
             UserSeeder.Seed(modelBuilder);
+            ProfileSeeder.Seed(modelBuilder);
         }
     }
 }

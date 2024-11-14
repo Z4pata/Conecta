@@ -3,6 +3,7 @@ using System;
 using Conecta.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Conecta.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241114232549_ProfilesTableWithSeeder")]
+    partial class ProfilesTableWithSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
@@ -45,12 +48,6 @@ namespace Conecta.Migrations
                             UserId = 1,
                             Biography = "Naci en bello en el 2007",
                             OtherDetails = "Quiero estudiar ingenieria de sistemas"
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            Biography = "Naci en Chicago en el 2000",
-                            OtherDetails = "Quiero estudiar Inteligencia artificial"
                         });
                 });
 
@@ -83,13 +80,13 @@ namespace Conecta.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2024, 11, 14, 18, 29, 25, 30, DateTimeKind.Local).AddTicks(943),
+                            CreationDate = new DateTime(2024, 11, 14, 18, 25, 48, 69, DateTimeKind.Local).AddTicks(5878),
                             Name = "admin"
                         },
                         new
                         {
                             Id = 2,
-                            CreationDate = new DateTime(2024, 11, 14, 18, 29, 25, 32, DateTimeKind.Local).AddTicks(2882),
+                            CreationDate = new DateTime(2024, 11, 14, 18, 25, 48, 71, DateTimeKind.Local).AddTicks(5273),
                             Name = "user"
                         });
                 });
@@ -139,19 +136,19 @@ namespace Conecta.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2024, 11, 14, 18, 29, 25, 395, DateTimeKind.Local).AddTicks(5210),
+                            CreationDate = new DateTime(2024, 11, 14, 18, 25, 48, 477, DateTimeKind.Local).AddTicks(7577),
                             Email = "zapata.devs@gmail.com",
                             Name = "Juan Jose",
-                            Password = "$2a$11$zlZybQ6ir.BMm60A55M6ceNOvG7lMNi84LMg6NOMuCa6JaBz2/vui",
+                            Password = "$2a$11$7HxUDKuaKByK3mOJONhw5OVL3kQTh6AYiePylof93D1DIxlicy1uG",
                             RoleId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreationDate = new DateTime(2024, 11, 14, 18, 29, 25, 573, DateTimeKind.Local).AddTicks(8886),
+                            CreationDate = new DateTime(2024, 11, 14, 18, 25, 48, 663, DateTimeKind.Local).AddTicks(6979),
                             Email = "user@example.com",
                             Name = "Test",
-                            Password = "$2a$11$ZXbYi0i6BYU6Czy0BoG/guJg.MUPNrWaJwV9QQKhk3RcKqX9Pf3h6",
+                            Password = "$2a$11$/2umaGTb0SkfH51OAhbKB.6hw5H7tkjUTqHOX8NK7DBUN0X8OfXt2",
                             RoleId = 2
                         });
                 });
