@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MimeKit;
 
+namespace Conecta.Service;
 public class EmailService
 {
     public async Task SendEmailAsync(string toEmail, string subject, string message)

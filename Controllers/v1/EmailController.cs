@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Conecta.DTOs.Requests;
+using Conecta.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Conecta.Controllers.v1
