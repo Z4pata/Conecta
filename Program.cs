@@ -107,6 +107,7 @@ builder.Services.AddSwaggerGen(c =>
 // Custom Services
 
 builder.Services.AddScoped<IUserRepository, UserService>();
+builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddAuthorizationBuilder()
     // Esto agrega la politica para verificar que un token tiene el rol "admin"
