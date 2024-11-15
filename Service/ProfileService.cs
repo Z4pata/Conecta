@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Conecta.Data;
+using Conecta.DTOs.Requests;
 using Conecta.Models;
 using Conecta.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,20 @@ namespace Conecta.Service
             var users = await _context.Users.Include(u => u.Profile).ToListAsync();
 
             return users;
+        }
+
+        public async Task<Profile?> GetByid(int id)
+        {
+            var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.UserId == id);
+
+            return profile;
+        }
+
+        public async Task Update(Profile profileToUpdate, ProfileRequest ChangeData)
+        {
+            _context.Entry(profileToUpdate).CurrentValues.SetValues(ChangeData);
+
+            await _context.SaveChangesAsync();
         }
     }
 }
